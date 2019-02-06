@@ -15,6 +15,7 @@
 		8B68715B2208424600502B18 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B6871592208424600502B18 /* LaunchScreen.storyboard */; };
 		8B6871662208424700502B18 /* AlgorithemsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6871652208424700502B18 /* AlgorithemsTests.swift */; };
 		8B6871712208424700502B18 /* AlgorithemsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6871702208424700502B18 /* AlgorithemsUITests.swift */; };
+		C0FD9A18220B481500AB76F0 /* Localizalbe.strings in Resources */ = {isa = PBXBuildFile; fileRef = C0FD9A1A220B481500AB76F0 /* Localizalbe.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,11 @@
 		8B68716C2208424700502B18 /* AlgorithemsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AlgorithemsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B6871702208424700502B18 /* AlgorithemsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgorithemsUITests.swift; sourceTree = "<group>"; };
 		8B6871722208424700502B18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C0FD9A19220B481500AB76F0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizalbe.strings; sourceTree = "<group>"; };
+		C0FD9A1B220B484A00AB76F0 /* hi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hi; path = hi.lproj/Main.strings; sourceTree = "<group>"; };
+		C0FD9A1C220B484A00AB76F0 /* hi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hi; path = hi.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		C0FD9A1D220B484A00AB76F0 /* hi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hi; path = hi.lproj/Localizalbe.strings; sourceTree = "<group>"; };
+		C0FD9A1E220B52DD00AB76F0 /* Algorithems.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Algorithems.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +105,7 @@
 		8B68714C2208424500502B18 /* Algorithems */ = {
 			isa = PBXGroup;
 			children = (
+				C0FD9A1E220B52DD00AB76F0 /* Algorithems.entitlements */,
 				8B68714D2208424500502B18 /* AppDelegate.swift */,
 				8B68714F2208424500502B18 /* ViewController.swift */,
 				8B6871512208424500502B18 /* Main.storyboard */,
@@ -106,6 +113,7 @@
 				8B6871592208424600502B18 /* LaunchScreen.storyboard */,
 				8B68715C2208424600502B18 /* Info.plist */,
 				8B6871542208424500502B18 /* Algorithems.xcdatamodeld */,
+				C0FD9A1A220B481500AB76F0 /* Localizalbe.strings */,
 			);
 			path = Algorithems;
 			sourceTree = "<group>";
@@ -196,6 +204,11 @@
 				TargetAttributes = {
 					8B6871492208424500502B18 = {
 						CreatedOnToolsVersion = 10.1;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
 					};
 					8B6871602208424700502B18 = {
 						CreatedOnToolsVersion = 10.1;
@@ -214,6 +227,7 @@
 			knownRegions = (
 				en,
 				Base,
+				hi,
 			);
 			mainGroup = 8B6871412208424500502B18;
 			productRefGroup = 8B68714B2208424500502B18 /* Products */;
@@ -233,6 +247,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8B68715B2208424600502B18 /* LaunchScreen.storyboard in Resources */,
+				C0FD9A18220B481500AB76F0 /* Localizalbe.strings in Resources */,
 				8B6871582208424600502B18 /* Assets.xcassets in Resources */,
 				8B6871532208424500502B18 /* Main.storyboard in Resources */,
 			);
@@ -301,6 +316,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				8B6871522208424500502B18 /* Base */,
+				C0FD9A1B220B484A00AB76F0 /* hi */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -309,8 +325,18 @@
 			isa = PBXVariantGroup;
 			children = (
 				8B68715A2208424600502B18 /* Base */,
+				C0FD9A1C220B484A00AB76F0 /* hi */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		C0FD9A1A220B481500AB76F0 /* Localizalbe.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C0FD9A19220B481500AB76F0 /* en */,
+				C0FD9A1D220B484A00AB76F0 /* hi */,
+			);
+			name = Localizalbe.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -320,6 +346,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -383,9 +410,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				BUILD_NUMBER = 1002;
 				BUNDLE_ID = MukeshVerma.Algorithems.Stag;
+				CODE_SIGN_ENTITLEMENTS = Algorithems/Algorithems.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3YVQQ2K649;
 				INFOPLIST_FILE = Algorithems/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -445,6 +474,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -502,9 +532,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				BUILD_NUMBER = 1002;
 				BUNDLE_ID = MukeshVerma.Algorithems.Stag;
+				CODE_SIGN_ENTITLEMENTS = Algorithems/Algorithems.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3YVQQ2K649;
 				INFOPLIST_FILE = Algorithems/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -563,6 +595,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -624,6 +657,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -682,9 +716,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				BUILD_NUMBER = 1001;
 				BUNDLE_ID = MukeshVerma.Algorithems;
+				CODE_SIGN_ENTITLEMENTS = Algorithems/Algorithems.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3YVQQ2K649;
 				INFOPLIST_FILE = Algorithems/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -705,9 +741,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				BUILD_NUMBER = 1001;
 				BUNDLE_ID = MukeshVerma.Algorithems;
+				CODE_SIGN_ENTITLEMENTS = Algorithems/Algorithems.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3YVQQ2K649;
 				INFOPLIST_FILE = Algorithems/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
