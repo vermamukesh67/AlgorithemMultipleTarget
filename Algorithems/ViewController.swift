@@ -67,8 +67,8 @@ class ViewController: UIViewController {
             print($0)
         }
         
-        let bigNumber = Int.max
-        let biggerNumber = bigNumber - 1
+        let bigNumber = UInt8.max
+        let biggerNumber = bigNumber
         print(biggerNumber)
         
         var crew1 = ["Captain": "Malcolm", "Doctor": "Simon"]
@@ -76,6 +76,12 @@ class ViewController: UIViewController {
         print(crew1.count)
         
         let numbers = [1, 3, 5, 7, 9]
+        
+        for num in numbers
+        {
+            print(num)
+        }
+        
         let result = numbers.filter { $0 >= 5 }
         print(result)
         
@@ -83,10 +89,36 @@ class ViewController: UIViewController {
             print("Criminal masterminds:", names.joined(separator: ", "))
         }
         
-        greet(names: "Malcolm", "Kaylee", "Zoe")
+        greet(names: "Malcolm", "Kaylee", "Zoe");
         
         let foo1 = 0x10
         print(foo1)
+        
+        let t1 = Testing(fName: "Verma", lName: "Mukesh", arr:["Verma"])
+        let t2 = Testing(fName: "Verma", lName: "Mukesh", arr:["Mukesh"])
+        let t3 = Testing(fName: "Verma", lName: "Mukesh", arr:["Verma"])
+        
+        if t1 == t2 {
+            print("both struct are equal")
+        }
+        if t1 == t3 {
+            print("both struct are equal")
+        }
+        else
+        {
+            print("both struct not are equal")
+        }
+        
+        let touple = (1,1)
+        
+        let arrTouple : [(Int, Int)] = [touple]
+        
+        print("arrTouple = \(arrTouple)")
+        
+        let function = makeIncrementer(forIncrement: 10)
+        print(function())
+        print(function())
+        print(function())
         
 //        var i = 1
 //
@@ -102,7 +134,48 @@ class ViewController: UIViewController {
 //        } while true
         
         print("Complete!")
+        
+//        var pt  = Cor3d(x: 0, y: 0, z: 0, label: "hello")
+//        var  status : MyClass.Status = .On
+//
+//        var x  = 0
+//
+//        for index in 1...5
+//        {
+//            //++x
+//        }
+//
+//        print(x)
+        
 
     }
 }
 
+struct Cor3d {
+    let x, y, z : Int
+    var label : String? = nil
+}
+
+class MyClass
+{
+    enum Status {
+        case On, Off
+    }
+}
+
+struct Testing : Equatable {
+    
+    let fName : String
+    let lName : String
+    let arr : [String]
+    
+}
+
+func makeIncrementer(forIncrement amount: Int) -> () -> Int {
+    var runningTotal = 0
+    func incrementer() -> Int {
+        runningTotal += amount
+        return runningTotal
+    }
+    return incrementer
+}
