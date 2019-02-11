@@ -18,15 +18,57 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ba5-Md-NQ2">
-                                <rect key="frame" x="121" y="275" width="117" height="77"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ba5-Md-NQ2">
+                                <rect key="frame" x="20" y="275" width="335" height="142.5"/>
+                                <color key="backgroundColor" red="0.40848531160000001" green="1" blue="0.27223609139999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <string key="text">With the release of Xcode6, Apple brought some great improvement to interface builder. With new Xcode6 now you can design custom views via Interface builder. You can achieve live rendering of custom views via IB_DESIGNABLE and IBInspectable attributes.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="FmT-8B-xgC">
+                                <rect key="frame" x="20" y="99" width="335" height="40"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="Hello" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CAF-AC-nUQ">
+                                        <rect key="frame" x="0.0" y="0.0" width="157.5" height="40"/>
+                                        <color key="backgroundColor" red="1" green="0.34063242960000001" blue="0.2140250769" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="75" text="Label q wefw  feww ew wfew " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ebw-wh-bti">
+                                        <rect key="frame" x="177.5" y="0.0" width="157.5" height="40"/>
+                                        <color key="backgroundColor" red="0.15671910480000001" green="1" blue="0.2440841148" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="B0V-1R-rJ7"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="With the release of Xcode6, Apple brought some great improvement to interface builder." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dCo-sa-0RM">
+                                <rect key="frame" x="20" y="437.5" width="335" height="61"/>
+                                <color key="backgroundColor" red="1" green="0.55798926969999996" blue="0.54989154029999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Ba5-Md-NQ2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="BRl-8G-WPs"/>
+                            <constraint firstItem="dCo-sa-0RM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="E70-hf-DUy"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="dCo-sa-0RM" secondAttribute="bottom" constant="10" id="KAK-1J-0JV"/>
+                            <constraint firstItem="dCo-sa-0RM" firstAttribute="top" secondItem="Ba5-Md-NQ2" secondAttribute="bottom" constant="20" id="Lfq-2g-gWZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="FmT-8B-xgC" secondAttribute="trailing" constant="20" id="czY-f9-5EM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="dCo-sa-0RM" secondAttribute="trailing" constant="20" id="hVe-Sk-YUw"/>
+                            <constraint firstItem="FmT-8B-xgC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="iSO-go-aYe"/>
+                            <constraint firstItem="Ba5-Md-NQ2" firstAttribute="top" secondItem="FmT-8B-xgC" secondAttribute="bottom" constant="136" id="oEL-dX-s4b"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ba5-Md-NQ2" secondAttribute="trailing" constant="20" id="uaU-B9-tJJ"/>
+                            <constraint firstItem="FmT-8B-xgC" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="79" id="yh0-sC-RiB"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
